@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block title %}
-Confirm Delete
+Подтверждение удаление
 {% endblock %}
 {% block content %}
-<h1>Are you sure delete this Product?</h1>
-<p> Product title {{ product.title }}</p>
-<p> Product description {{ product.description }}</p>
-<p> Product price {{ product.price }}</p>
+<h4>Вы точно хотите удалить?</h4>
+<p> Товар {{ product.title }}</p>
+<p> Описание {{ product.description }}</p>
+<p> Цена: {{ product.price }}</p>
 <form action="{% url 'confirm_delete' product.pk  %}" method="POST">
 {% csrf_token %}
     <input type="submit" value="Yes">
