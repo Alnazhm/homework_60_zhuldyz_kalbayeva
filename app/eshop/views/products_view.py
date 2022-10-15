@@ -1,8 +1,8 @@
-from django.shortcuts import render
 from eshop.models import Product
 from django.views.generic import ListView
 from urllib.parse import urlencode
 from eshop.forms import SearchForm
+from django.db.models import Q
 
 
 class IndexView(ListView):
@@ -28,7 +28,7 @@ class IndexView(ListView):
     def get_queryset(self):
         queryset = super().get_queryset().exclude(is_deleted=True)
         if self.search_value:
-            query = Q(title__icontains=self.search_value) | Q(author__icontains=self.search_value)
+            query = Q(title__icontains=self.search_value)
             print(query.__dict__)
             queryset = queryset.filter(query)
         return queryset
@@ -39,9 +39,3 @@ class IndexView(ListView):
         if self.search_value:
             context['query'] = urlencode({'search': self.search_value})
         return context
-    # products = Product.objects.filter(is_deleted=False, balance__gte=1)
-    #
-    # context = {
-    #     'products': products
-    # }
-    # return render(request, 'products.html', context=context)

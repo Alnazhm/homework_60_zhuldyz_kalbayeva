@@ -11,18 +11,3 @@ class ProductCreate(CreateView):
 
     def get_success_url(self):
         return reverse('product_detail', kwargs={'pk': self.object.pk})
-
-
-# def product_add_view(request):
-#     form = ProductForm()
-#     if request.method == 'GET':
-#         context = {'form': form}
-#         return render(request, 'add_product.html', context)
-#     form = ProductForm(request.POST)
-#     if not form.is_valid():
-#         context = {
-#             'form': form
-#         }
-#         return render(request, 'add_product.html', context)
-#     product = Product.objects.create(**form.cleaned_data)
-#     return redirect(reverse('product_detail', kwargs={'pk': product.pk}))
