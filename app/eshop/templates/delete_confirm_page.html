@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+Confirm Delete
+{% endblock %}
+{% block content %}
+<h1>Are you sure delete this Product?</h1>
+<p> Product title {{ product.title }}</p>
+<p> Product description {{ product.description }}</p>
+<p> Product price {{ product.price }}</p>
+<form action="{% url 'confirm_delete' product.pk  %}" method="POST">
+{% csrf_token %}
+    <input type="submit" value="Yes">
+    <a href="{% url 'products' %}">No</a>
+</form>
+
+{% endblock %}

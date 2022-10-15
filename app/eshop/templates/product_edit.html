@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{% block menu%}
+<a style="margin-left: 20px;color: black;text-decoration: underline;" href="{% url 'product_edit' product.pk %}"> Edit product</a>
+<span>|</span>
+{%endblock%}
+{% block content %}
+    <div class="container">
+        <div class="box">
+            <div class="head_text heading text-center">
+                <p class="main-title-home">Edit product</p>
+            </div>
+           <form action="{% url 'product_edit' product.pk %}" method="POST">
+               {% csrf_token%}
+               <div class="form">
+                    {% include 'partials/product_form.html' with button_text='Edit product' %}
+               </div>
+           </form>
+        </div>
+    </div>
+{% endblock %}

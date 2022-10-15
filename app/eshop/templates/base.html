@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Blog {% endblock%}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+{% block menu %}
+<div class="container justify-content-end">
+    <div class="menu ">
+        <a style="margin-right: 450px;font-weight: bold; color: black;" href="{% url 'products' %}">My market</a>
+        <a style="margin-right: 30px;color: black;text-decoration: underline;" href="{% url 'products' %}">Products</a>
+        <span>|</span>
+        <a style="margin-left: 20px;color: black;text-decoration: underline;" href="{% url 'product_add' %}"> Add product</a>
+        </div>
+</div>
+ {% endblock %}
+<div class="container">
+    {% block content %} {% endblock %}
+</div>
+</body>
+</html>
