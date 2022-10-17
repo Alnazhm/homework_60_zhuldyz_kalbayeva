@@ -3,10 +3,10 @@
     <div class="search-form" style="margin: 15px; margin-left: 550px;">
                     {% include 'partials/search.html' %}
                 </div>
+    {% if error_text is not None %}
+        <h1 style="color: red;">{{ error_text }}</h1>
+    {% endif %}
 <div class="row mt-5">
-
-
-
     {%for product in products%}
     <div class="col-sm-6">
           <div class="row no-gutters" >
@@ -17,16 +17,31 @@
               <div class="card-body">
                 <h5 class="card-title">{{product.title}}</h5>
                   <p>{{product.category}}</p>
-                  <p class="card-text"><b>Price: {{product.price}}$</b></p>
-                <p class="card-text" ><a style="text-decoration: underline; color: black;" href="{% url 'product_detail' product.pk %}">see more >>></a></p>
+                  <p class="card-text"><b>Цена: {{product.price}}$</b></p>
+                <p class="card-text" ><a style="text-decoration: underline; color: black;" href="{% url 'product_detail' product.pk %}">детальный просмотр >>></a></p>
                   <div class="container">
                       <div class="row">
                         <div class="col-sm">
-                           <a href="{% url 'product_edit' product.pk %}"> Edit product</a>
+                           <a href="{% url 'product_edit' product.pk %}">Изменить</a>
                         </div>
                         <div class="col-sm">
-                           <a href="{% url 'product_delete' product.pk %}"> Delete product</a>
+                           <a href="{% url 'product_delete' product.pk %}">Удалить</a>
                         </div>
+                          <div col="col-sm">
+                              <form class="text-center" action="{% url 'products' product.pk %}" method="GET">
+                                        {% for f in product_add_basket_form %}
+                                        {% for error in f.errors %}
+                                            <p class="form-error ">{{ f.error }}</p>
+                                            {{ f }}
+                                        {% endfor %}
+                                        <div class="row justify-content-end">
+                                            <div class="col-10 text-center">
+                                                <button type="submit" class="btn btn-primary btn-sm" style="width: 70px;height: 25px;">Корзина</button>
+                                            </div>
+                                        </div>
+                                             {% endfor %}
+                                    </form>
+                          </div>
                       </div>
                     </div>
               </div>
@@ -34,10 +49,11 @@
           </div>
     </div>
     {%endfor%}
-<div>
+
+</div>
+    <div>
     {% if is_paginated %}
         {% include 'partials/pagination.html' %}
     {% endif %}
-</div>
 </div>
 {% endblock %}

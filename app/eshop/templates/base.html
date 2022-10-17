@@ -9,12 +9,14 @@
 </head>
 <body>
 {% block menu %}
-<div class="container justify-content-end">
+<div class="container justify-content-end ">
     <div class="menu " style="margin:25px;">
         <a style="margin-right: 450px;font-weight: bold; color: black;" href="{% url 'products' %}">Мой магазин</a>
         <a style="margin-right: 30px;color: black;text-decoration: underline;" href="{% url 'products' %}">Товары</a>
         <span>|</span>
         <a style="margin-left: 20px;color: black;text-decoration: underline;" href="{% url 'product_add' %}">Добавить товар</a>
+        <span>|</span>
+        <a style="margin-left: 20px;color: black;text-decoration: underline;" href="{% url 'products_in_basket' %}">Корзина</a>
         </div>
 </div>
  {% endblock %}
