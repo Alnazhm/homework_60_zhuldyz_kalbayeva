@@ -13,7 +13,7 @@ class IndexView(ListView):
     context_object_name = 'products'
     ordering = ('category', 'title')
     paginate_by = 5
-    paginate_orphans = 1
+    paginate_orphans = 0
     error_text = None
     def get(self, request, *args, **kwargs):
         self.form = self.get_search_form()
