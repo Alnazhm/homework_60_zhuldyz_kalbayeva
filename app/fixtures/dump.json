@@ -3,30 +3,30 @@
   "model": "eshop.product",
   "pk": 1,
   "fields": {
-    "title": "Macbook Pro M2",
-    "description": "Excellent product",
+    "title": "Dyson пылесос",
+    "description": "",
     "category": "Electronics",
-    "images_url": "https://tengrinews.kz/userdata/news/2022/news_472120/thumb_m/photo_400307.png",
-    "price": "3000.00",
-    "balance": 2,
-    "created_at": "2022-09-30T18:13:56.851Z",
-    "changed_at": "2022-09-30T20:39:44.381Z",
-    "is_deleted": true,
-    "deleted_at": "2022-09-30T20:39:44.379Z"
+    "images_url": "https://shop.kz/upload/iblock/33c/150611_3.jpg",
+    "price": "1000.00",
+    "balance": 8,
+    "created_at": "2022-10-17T21:21:42.245Z",
+    "changed_at": "2022-10-17T21:21:42.245Z",
+    "is_deleted": false,
+    "deleted_at": null
   }
 },
 {
   "model": "eshop.product",
   "pk": 2,
   "fields": {
-    "title": "Macbook Pro M3",
-    "description": "Excellent products",
+    "title": "Macbook Air M2",
+    "description": "",
     "category": "Electronics",
-    "images_url": "https://tengrinews.kz/userdata/news/2022/news_472120/thumb_m/photo_400307.png",
-    "price": "3000.00",
-    "balance": 2,
-    "created_at": "2022-09-30T18:17:42.606Z",
-    "changed_at": "2022-10-04T13:20:24.287Z",
+    "images_url": "https://static.shop.kz/upload/resize_cache/iblock/b0c/450_450_1/161192_02.jpg",
+    "price": "2000.00",
+    "balance": 200,
+    "created_at": "2022-10-17T21:37:18.850Z",
+    "changed_at": "2022-10-17T21:37:18.850Z",
     "is_deleted": false,
     "deleted_at": null
   }
@@ -35,16 +35,106 @@
   "model": "eshop.product",
   "pk": 3,
   "fields": {
-    "title": "A Nothing phone 1",
-    "description": "Good phone",
+    "title": "Earpods 3",
+    "description": "",
     "category": "Electronics",
-    "images_url": "data:image/jpeg;base64,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",
-    "price": "600.00",
-    "balance": 3,
-    "created_at": "2022-09-30T18:24:55.404Z",
-    "changed_at": "2022-10-04T13:24:52.961Z",
+    "images_url": "https://fmobile.kz/_next/image?url=https%3A%2F%2Fapi.fmobile.kz%2Fimage%2Fmedia%2Fsale%2Fimage%2Fairpods-3gen-q122-pdp-image-position-4-ww-ru.png&w=2048&q=75",
+    "price": "200.00",
+    "balance": 20,
+    "created_at": "2022-10-17T21:40:04.104Z",
+    "changed_at": "2022-10-17T21:40:04.104Z",
     "is_deleted": false,
     "deleted_at": null
+  }
+},
+{
+  "model": "eshop.product",
+  "pk": 4,
+  "fields": {
+    "title": "Iphone 14 Pro Max",
+    "description": "",
+    "category": "Electronics",
+    "images_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRvrEcC_IFniVFMqvfbRoXk208ftOUuNzMzogkjq7e2l0fXgOZAtSPuRj1Hx246aNCK9EsUYtIJ2g&usqp=CAc",
+    "price": "2000.00",
+    "balance": 30,
+    "created_at": "2022-10-17T21:41:20.247Z",
+    "changed_at": "2022-10-17T21:41:20.247Z",
+    "is_deleted": false,
+    "deleted_at": null
+  }
+},
+{
+  "model": "eshop.product",
+  "pk": 5,
+  "fields": {
+    "title": "Ferrari 458",
+    "description": "",
+    "category": "Cars",
+    "images_url": "https://s.rdrom.ru/1/pubs/4/31385/1688657.jpg",
+    "price": "90000.00",
+    "balance": 20,
+    "created_at": "2022-10-17T21:43:17.030Z",
+    "changed_at": "2022-10-17T21:44:32.747Z",
+    "is_deleted": false,
+    "deleted_at": null
+  }
+},
+{
+  "model": "eshop.productorder",
+  "pk": 1,
+  "fields": {
+    "order": 2,
+    "product": 1,
+    "count": 1,
+    "created_at": "2022-10-17T21:33:34.356Z",
+    "updated_at": "2022-10-17T21:33:34.356Z"
+  }
+},
+{
+  "model": "eshop.productorder",
+  "pk": 2,
+  "fields": {
+    "order": 3,
+    "product": 1,
+    "count": 1,
+    "created_at": "2022-10-17T21:34:20.839Z",
+    "updated_at": "2022-10-17T21:34:20.840Z"
+  }
+},
+{
+  "model": "eshop.userorder",
+  "pk": 1,
+  "fields": {
+    "user_name": "Zhuldyz",
+    "phone": "90920",
+    "address": "sdfsfs",
+    "created_at": "2022-10-17T21:32:36.907Z",
+    "updated_at": "2022-10-17T21:32:36.907Z",
+    "products": []
+  }
+},
+{
+  "model": "eshop.userorder",
+  "pk": 2,
+  "fields": {
+    "user_name": "dgdgd",
+    "phone": "999",
+    "address": "dgdg",
+    "created_at": "2022-10-17T21:33:34.351Z",
+    "updated_at": "2022-10-17T21:33:34.351Z",
+    "products": []
+  }
+},
+{
+  "model": "eshop.userorder",
+  "pk": 3,
+  "fields": {
+    "user_name": "Zhuldyz",
+    "phone": "9090",
+    "address": "fwew",
+    "created_at": "2022-10-17T21:34:20.832Z",
+    "updated_at": "2022-10-17T21:34:20.832Z",
+    "products": []
   }
 },
 {
