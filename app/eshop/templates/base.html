@@ -9,16 +9,23 @@
 </head>
 <body>
 {% block menu %}
-<div class="container justify-content-end ">
-    <div class="menu " style="margin:25px;">
-        <a style="margin-right: 450px;font-weight: bold; color: black;" href="{% url 'products' %}">Мой магазин</a>
-        <a style="margin-right: 30px;color: black;text-decoration: underline;" href="{% url 'products' %}">Товары</a>
-        <span>|</span>
-        <a style="margin-left: 20px;color: black;text-decoration: underline;" href="{% url 'product_add' %}">Добавить товар</a>
-        <span>|</span>
-        <a style="margin-left: 20px;color: black;text-decoration: underline;" href="{% url 'products_in_basket' %}">Корзина</a>
-        </div>
-</div>
+     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+
+  <a class="navbar-brand" style="margin-right: 450px;font-weight: bold; color: black;" href="{% url 'products' %}">Мой магазин</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" style="margin-right: 30px;color: black;text-decoration: underline;" href="{% url 'products' %}">Товары</a>
+      <a class="nav-item nav-link" style="margin-left: 20px;color: black;text-decoration: underline;" href="{% url 'product_add' %}">Добавить товар</a>
+      <a class="nav-item nav-link" style="margin-left: 20px;color: black;text-decoration: underline;" href="{% url 'products_in_basket' %}">Корзина</a>
+    </div>
+  </div>
+    </div>
+     </nav>
+<br>
  {% endblock %}
 <div class="container">
     {% block content %} {% endblock %}
