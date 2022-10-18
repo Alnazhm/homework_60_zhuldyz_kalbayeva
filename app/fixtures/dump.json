@@ -1,5 +1,25 @@
 [
 {
+  "model": "eshop.productinbasket",
+  "pk": 3,
+  "fields": {
+    "product": 1,
+    "count": 2,
+    "created_at": "2022-10-17T22:01:51.009Z",
+    "updated_at": "2022-10-17T22:01:51.009Z"
+  }
+},
+{
+  "model": "eshop.productinbasket",
+  "pk": 4,
+  "fields": {
+    "product": 5,
+    "count": 1,
+    "created_at": "2022-10-18T07:43:50.780Z",
+    "updated_at": "2022-10-18T07:43:50.780Z"
+  }
+},
+{
   "model": "eshop.product",
   "pk": 1,
   "fields": {
@@ -8,7 +28,7 @@
     "category": "Electronics",
     "images_url": "https://shop.kz/upload/iblock/33c/150611_3.jpg",
     "price": "1000.00",
-    "balance": 8,
+    "balance": 6,
     "created_at": "2022-10-17T21:21:42.245Z",
     "changed_at": "2022-10-17T21:21:42.245Z",
     "is_deleted": false,
@@ -80,6 +100,38 @@
   }
 },
 {
+  "model": "eshop.product",
+  "pk": 6,
+  "fields": {
+    "title": "Смарт часы HUAWEI",
+    "description": "",
+    "category": "Electronics",
+    "images_url": "https://api.technodom.kz/f3/api/v1/images/272/272/257675_1.webp",
+    "price": "200.00",
+    "balance": 60,
+    "created_at": "2022-10-18T08:05:33.633Z",
+    "changed_at": "2022-10-18T08:05:33.633Z",
+    "is_deleted": false,
+    "deleted_at": null
+  }
+},
+{
+  "model": "eshop.product",
+  "pk": 7,
+  "fields": {
+    "title": "Планшет",
+    "description": "",
+    "category": "Electronics",
+    "images_url": "https://api.technodom.kz/f3/api/v1/images/272/272/256760_1c.webp",
+    "price": "200.00",
+    "balance": 50,
+    "created_at": "2022-10-18T08:06:29.671Z",
+    "changed_at": "2022-10-18T08:06:29.671Z",
+    "is_deleted": false,
+    "deleted_at": null
+  }
+},
+{
   "model": "eshop.productorder",
   "pk": 1,
   "fields": {
@@ -142,7 +194,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$390000$nnL13RRrz33tjd0x04c25d$+WmhfO8UKfKPNlnr8PLIBnssbmv803sRHftsO6+PoRE=",
-    "last_login": "2022-10-04T13:22:56.065Z",
+    "last_login": "2022-10-18T07:12:38.652Z",
     "is_superuser": true,
     "username": "root",
     "first_name": "",
