@@ -22,6 +22,8 @@ class OrderCreateView(CreateView):
                     product=product,
                     count=products.count
                 )
+                product_count = product.balance - products.count
+                Product.objects.filter(id=product.id).update(balance=product_count)
         product = ProductInBasket.objects.all()
         product.delete()
         return redirect('products')

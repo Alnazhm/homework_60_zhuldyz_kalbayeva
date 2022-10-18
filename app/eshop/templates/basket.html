@@ -43,15 +43,16 @@
     </div>
     <div>
      {% for f in order_form %}
-    <form class="text-center" action="{% url 'create_order' %}" method="POST">
+    <form  action="{% url 'create_order' %}" method="POST">
             {% csrf_token %}
-            <label for="{{ f.id_for_label }}">{{ f.label }}:</label>
+         <div class="form-group">
+            <label class="form-control" for="{{ f.id_for_label }}">{{ f.label }}:</label>
             {{ f}}
             <br>
-
+        </div>
     {% endfor %}
-        <div class="row justify-content-center">
-            <div class="col-10 text-center">
+        <div class="row justify-content-start">
+            <div class="col-10 ">
                 <button type="submit" class="btn btn-primary">Оформить заказ</button>
             </div>
         </div>

@@ -9,8 +9,8 @@
 <p> Цена: {{ product.price }}</p>
 <form action="{% url 'confirm_delete' product.pk  %}" method="POST">
 {% csrf_token %}
-    <input type="submit" value="Yes">
-    <a href="{% url 'products' %}">No</a>
+    <input class="btn btn-primary" type="submit" value="Yes">
+    <a href="{% url 'products' %}" class="btn btn-primary" role="button">No</a>
 </form>
 
 {% endblock %}

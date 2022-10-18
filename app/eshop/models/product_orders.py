@@ -15,7 +15,7 @@ class ProductOrder(models.Model):
         on_delete=models.CASCADE
     )
     count = models.IntegerField(
-        verbose_name='Остаток'
+        verbose_name='Количество'
     )
     created_at = models.DateTimeField(
         verbose_name='Дата создания',

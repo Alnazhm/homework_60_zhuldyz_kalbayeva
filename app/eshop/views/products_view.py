@@ -43,7 +43,6 @@ class IndexView(ListView):
             queryset = queryset.filter(query)
         if self.product_add_basket_value:
             product_id = self.kwargs.get('pk')
-            print(product_id)
             count = self.product_add_basket_value
             product = Product.objects.get(id=product_id)
             if product.balance >= count:
@@ -53,8 +52,6 @@ class IndexView(ListView):
                     ProductInBasket.objects.filter(product_id=product_id).update(count=sum_of_count)
                 else:
                     ProductInBasket.objects.create(product_id=product_id, count=count)
-                product_count = product.balance - count
-                Product.objects.filter(id=product_id).update(balance=product_count)
             else:
                 self.error_text = 'Вы ввели слишком большое количество чем на складе'
                 return queryset
